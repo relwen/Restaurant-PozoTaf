@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slash_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/default_padding"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="iam.abdoulkader.pozotaf.SlashScreenActivity">
+
+    <com.thebrownarrow.customfont.CustomFontTextView
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textColor="@color/colorPrimaryDark"
+        app:custom_typeface="font/roboto/Roboto-Regular.ttf"/>
+
+    <com.thebrownarrow.customfont.CustomFontTextView
+        android:id="@+id/app_short_descr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_short_desc"
+        android:layout_below="@id/app_name"
+        android:layout_margin="@dimen/text_margin"
+        android:lineSpacingExtra="5dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:custom_typeface="font/roboto/Roboto-Light.ttf"
+        android:gravity="center"
+        android:lines="3"/>
+
+    <FrameLayout
+        android:id="@+id/load_anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_short_descr"
+        android:layout_marginTop="10dp">
+
+        <com.q42.android.scrollingimageview.ScrollingImageView
+            android:id="@+id/siv_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:speed="1dp"
+            app:src="@drawable/scrolling_background" />
+
+        <com.q42.android.scrollingimageview.ScrollingImageView
+            android:id="@+id/siv_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:speed="1.9dp"
+            app:src="@drawable/scrolling_foreground" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:src="@drawable/pozotaf_no_text_blue" />
+
+    </FrameLayout>
+
+    <com.thebrownarrow.customfont.CustomFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/two_x_default_padding"
+        android:text="@string/loading"
+        android:layout_below="@id/load_anim"
+        android:textAllCaps="true"
+        app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+    <com.thebrownarrow.customfont.CustomFontTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/copyright"
+        android:textColor="@color/black"
+        app:custom_typeface="font/benton/BentonThin.otf"/>
+
+</RelativeLayout>

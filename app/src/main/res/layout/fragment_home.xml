@@ -1,0 +1,115 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="iam.abdoulkader.pozotaf.fragment.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.glide.slider.library.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_height"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/search_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/card_elevation"
+            android:layout_margin="@dimen/search_box_margin"
+            android:layout_below="@id/slider">
+
+            <com.thebrownarrow.customfont.CustomFontEditText
+                android:id="@+id/search_input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_box_height"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:focusable="false"
+                android:drawableRight="@drawable/ic_search_black_24dp"
+                android:paddingLeft="@dimen/two_x_default_padding"
+                android:paddingRight="@dimen/two_x_default_padding"
+                android:hint="@string/search"/>
+
+        </android.support.v7.widget.CardView>
+
+        <ViewFlipper
+            android:id="@+id/food_cat_viewflipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_box">
+
+            <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:padding="@dimen/default_padding"
+                android:indeterminateTint="@color/colorPrimaryDark"/>
+
+            <com.thebrownarrow.customfont.CustomFontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/two_x_default_padding"
+                android:text="@string/no_data"
+                android:gravity="center"
+                app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/food_cat_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/food_cat_item" />
+
+        </ViewFlipper>
+
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:id="@+id/food_of_the_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            android:text="@string/menu_of_the_day"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            app:custom_typeface="font/roboto/Roboto-Regular.ttf"
+            android:layout_below="@id/food_cat_viewflipper"/>
+
+        <ViewFlipper
+            android:id="@+id/food_viewflipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/food_of_the_day">
+
+            <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:padding="@dimen/default_padding"
+                android:indeterminateTint="@color/colorPrimaryDark"/>
+
+            <com.thebrownarrow.customfont.CustomFontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/two_x_default_padding"
+                android:text="@string/no_data"
+                android:gravity="center"
+                app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/food_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="LinearLayoutManager"
+                android:orientation="vertical"
+                tools:listitem="@layout/food_item" />
+
+        </ViewFlipper>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

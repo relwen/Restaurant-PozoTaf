@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="iam.abdoulkader.pozotaf.fragment.SignUpFragment">
+
+    <RelativeLayout
+        android:id="@+id/control_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            android:layout_centerVertical="true"/>
+
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/back"
+            android:text="@string/back"
+            android:textSize="20sp"
+            android:padding="@dimen/default_padding"
+            android:textColor="@color/black"
+            app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_help_outline_black_24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/control_space">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/default_padding"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingBottom="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/app_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:src="@drawable/pozautaf"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:paddingTop="15dp">
+
+                    <com.thebrownarrow.customfont.CustomFontEditText
+                        android:id="@+id/input_full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:lines="1"
+                        android:inputType="text"
+                        android:hint="@string/hint_full_name"
+                        app:custom_typeface="font/roboto/Roboto-Light.ttf"
+                        style="@style/text_input"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:paddingTop="15dp">
+
+                    <com.thebrownarrow.customfont.CustomFontEditText
+                        android:id="@+id/input_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:lines="1"
+                        android:inputType="phone"
+                        android:hint="@string/hint_phone"
+                        app:custom_typeface="font/roboto/Roboto-Light.ttf"
+                        style="@style/text_input"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:paddingTop="15dp">
+
+                    <com.thebrownarrow.customfont.CustomFontEditText
+                        android:id="@+id/input_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:lines="1"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/hint_email"
+                        app:custom_typeface="font/roboto/Roboto-Light.ttf"
+                        style="@style/text_input"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    app:passwordToggleEnabled="true">
+
+                    <com.thebrownarrow.customfont.CustomFontEditText
+                        android:id="@+id/input_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:lines="1"
+                        android:inputType="textPassword"
+                        android:hint="@string/hint_passwd"
+                        app:custom_typeface="font/roboto/Roboto-Light.ttf"
+                        style="@style/text_input"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="@dimen/default_padding">
+
+                    <com.thebrownarrow.customfont.CustomFontButton
+                        android:id="@+id/btn_to_sign_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/validate"
+                        android:background="@drawable/border_radius_btn_2"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white"
+                        app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+                    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        app:mpb_indeterminateTint="@color/white"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <com.thebrownarrow.customfont.CustomFontTextView
+                    android:id="@+id/sign_in_now"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/have_you_an_account"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/CardViewStyle">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true" />
+
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/default_padding"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:text="1200 Fcfa"
+            android:layout_alignBottom="@id/image"
+            app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+
+        <ImageView
+            android:id="@+id/non_halal"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/default_padding"
+            android:layout_alignBottom="@id/image"
+            android:layout_alignParentRight="true"/>
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:baselineAligned="false"
+            android:weightSum="100.0"
+            android:layout_below="@id/image">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="100">
+
+                <com.thebrownarrow.customfont.CustomFontTextView
+                    android:textSize="18.0sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/item_name_and_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="5dp"
+                    android:maxLines="3"
+                    app:custom_typeface="font/roboto/Roboto-Light.ttf"
+                    android:text="Nom et petite description du plat du jour." />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

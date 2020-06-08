@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/CardViewStyle">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/default_padding">
+
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Ouagadougou"
+            android:textSize="14sp"
+            android:lineSpacingExtra="5dp"
+            android:maxLines="2"
+            android:textColor="@color/colorPrimaryDark"
+            app:custom_typeface="font/roboto/Roboto-Regular.ttf"/>
+
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:textSize="14sp"
+            android:text="@string/test_desc"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="5dp"
+            app:custom_typeface="font/roboto/Roboto-Light.ttf" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

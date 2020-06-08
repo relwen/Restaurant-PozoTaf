@@ -1,0 +1,1 @@
+include ':app', ':customfont', ':materialprogressbar', ':concealSharedPreference', 'multipicker', 'core', 'commons', 'navigationtabbar', 'glideslider', 'scrollingimageview', ':androidsvg-1.2.1', ':annotation-4.6.1', ':glide-full-4.6.1'

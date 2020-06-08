@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_50"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="iam.abdoulkader.pozotaf.FoodDetailsActivity"
+    tools:showIn="@layout/activity_food_details">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:textSize="20sp"
+            android:lineSpacingExtra="7dp"
+            android:textColor="@color/grey_700"
+            app:custom_typeface="font/roboto/Roboto-Light.ttf"
+            android:text="@string/large_text" />
+
+        <com.thebrownarrow.customfont.CustomFontEditText
+            android:id="@+id/msg_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/desc"
+            android:layout_margin="@dimen/text_margin"
+            android:maxLines="5"
+            app:custom_typeface="font/roboto/Roboto-Light.ttf"
+            android:hint="@string/msg"/>
+
+        <iam.abdoulkader.pozotaf.view.RippleView
+            android:id="@+id/add_to_cart_btn"
+            android:layout_width="match_parent"
+            android:layout_below="@id/msg_edit_text"
+            android:layout_marginLeft="@dimen/text_margin"
+            android:layout_marginRight="@dimen/text_margin"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/gmail_bg"
+            android:gravity="center"
+            android:text="@string/add_to_cart"
+            android:textColor="#fff" />
+
+
+    </RelativeLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

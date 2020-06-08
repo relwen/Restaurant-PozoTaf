@@ -1,0 +1,184 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    /* TEXT STYLE : START */
+
+    <style name="TransparentText">
+        <item name="android:background">@color/colorPrimaryTransparent</item>
+    </style>
+
+    <style name="welcome">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="app_name">
+        <item name="android:textSize">21dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
+
+    <style name="about">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">30dp</item>
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
+
+    <style name="home_power_by">
+        <item name="android:textSize">8dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
+
+    <style name="home_version">
+        <item name="android:textSize">8dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
+
+    <style name="country_style_1">
+        <item name="android:textSize">15dp</item>
+        <item name="android:color">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="text_input">
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="small_text_btn">
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="label_1">
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="input_1">
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:background">@drawable/input_1_bg</item>
+        <item name="android:lines">1</item>
+        <item name="android:editable">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="info_1">
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:background">@color/grey_100</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+    </style>
+
+    <style name="sign_out">
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/red_A400</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme.NoActionBar">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="hint_text">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+    </style>
+
+    /* TEXT STYLE : END */
+
+    <style name="button_1">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="button_2">
+        <item name="android:background">@drawable/button_bordered</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    /*==================================*/
+
+    <style name="custom_toolbar_title">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    /*=================================*/
+
+    <style name="CardView.BaseStyle" parent="@style/CardView">
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="CardViewStyle" parent="@style/CardView.BaseStyle">
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+    </style>
+
+    <style name="CardViewStyle2" parent="@style/CardView.BaseStyle">
+        <item name="cardElevation">@dimen/card_elevation</item>
+    </style>
+
+    <style name="CardViewStyle3" parent="@style/CardView.BaseStyle">
+        <item name="cardElevation">1.0dip</item>
+    </style>
+
+</resources>

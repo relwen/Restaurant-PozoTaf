@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Android.iml" filepath="$PROJECT_DIR$/Android.iml" group="Android" />
+      <module fileurl="file://$PROJECT_DIR$/androidsvg-1.2.1/Android-androidsvg-1.2.1.iml" filepath="$PROJECT_DIR$/androidsvg-1.2.1/Android-androidsvg-1.2.1.iml" group="Android/androidsvg-1.2.1" />
+      <module fileurl="file://$PROJECT_DIR$/annotation-4.6.1/Android-annotation-4.6.1.iml" filepath="$PROJECT_DIR$/annotation-4.6.1/Android-annotation-4.6.1.iml" group="Android/annotation-4.6.1" />
+      <module fileurl="file://$PROJECT_DIR$/app/Android-app.iml" filepath="$PROJECT_DIR$/app/Android-app.iml" group="Android/app" />
+      <module fileurl="file://$PROJECT_DIR$/commons/Android-commons.iml" filepath="$PROJECT_DIR$/commons/Android-commons.iml" group="Android/commons" />
+      <module fileurl="file://$PROJECT_DIR$/concealSharedPreference/Android-concealSharedPreference.iml" filepath="$PROJECT_DIR$/concealSharedPreference/Android-concealSharedPreference.iml" group="Android/concealSharedPreference" />
+      <module fileurl="file://$PROJECT_DIR$/core/Android-core.iml" filepath="$PROJECT_DIR$/core/Android-core.iml" group="Android/core" />
+      <module fileurl="file://$PROJECT_DIR$/customfont/Android-customfont.iml" filepath="$PROJECT_DIR$/customfont/Android-customfont.iml" group="Android/customfont" />
+      <module fileurl="file://$PROJECT_DIR$/glide-full-4.6.1/Android-glide-full-4.6.1.iml" filepath="$PROJECT_DIR$/glide-full-4.6.1/Android-glide-full-4.6.1.iml" group="Android/glide-full-4.6.1" />
+      <module fileurl="file://$PROJECT_DIR$/glideslider/Android-glideslider.iml" filepath="$PROJECT_DIR$/glideslider/Android-glideslider.iml" group="Android/glideslider" />
+      <module fileurl="file://$PROJECT_DIR$/materialprogressbar/Android-materialprogressbar.iml" filepath="$PROJECT_DIR$/materialprogressbar/Android-materialprogressbar.iml" group="Android/materialprogressbar" />
+      <module fileurl="file://$PROJECT_DIR$/multipicker/Android-multipicker.iml" filepath="$PROJECT_DIR$/multipicker/Android-multipicker.iml" group="Android/multipicker" />
+      <module fileurl="file://$PROJECT_DIR$/navigationtabbar/Android-navigationtabbar.iml" filepath="$PROJECT_DIR$/navigationtabbar/Android-navigationtabbar.iml" group="Android/navigationtabbar" />
+      <module fileurl="file://$PROJECT_DIR$/scrollingimageview/Android-scrollingimageview.iml" filepath="$PROJECT_DIR$/scrollingimageview/Android-scrollingimageview.iml" group="Android/scrollingimageview" />
+      <module fileurl="file://$PROJECT_DIR$/PozOTaf.iml" filepath="$PROJECT_DIR$/PozOTaf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidsvg-1.2.1/androidsvg-1.2.1.iml" filepath="$PROJECT_DIR$/androidsvg-1.2.1/androidsvg-1.2.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/annotation-4.6.1/annotation-4.6.1.iml" filepath="$PROJECT_DIR$/annotation-4.6.1/annotation-4.6.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons/commons.iml" filepath="$PROJECT_DIR$/commons/commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/concealSharedPreference/concealSharedPreference.iml" filepath="$PROJECT_DIR$/concealSharedPreference/concealSharedPreference.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customfont/customfont.iml" filepath="$PROJECT_DIR$/customfont/customfont.iml" />
+      <module fileurl="file://$PROJECT_DIR$/glide-full-4.6.1/glide-full-4.6.1.iml" filepath="$PROJECT_DIR$/glide-full-4.6.1/glide-full-4.6.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/glideslider/glideslider.iml" filepath="$PROJECT_DIR$/glideslider/glideslider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialprogressbar/materialprogressbar.iml" filepath="$PROJECT_DIR$/materialprogressbar/materialprogressbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multipicker/multipicker.iml" filepath="$PROJECT_DIR$/multipicker/multipicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/navigationtabbar/navigationtabbar.iml" filepath="$PROJECT_DIR$/navigationtabbar/navigationtabbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrollingimageview/scrollingimageview.iml" filepath="$PROJECT_DIR$/scrollingimageview/scrollingimageview.iml" />
+    </modules>
+  </component>
+</project>

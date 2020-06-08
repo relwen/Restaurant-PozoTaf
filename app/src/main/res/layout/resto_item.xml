@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/CardViewStyle">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/identity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/default_padding">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="75"
+                android:orientation="vertical">
+
+                <com.thebrownarrow.customfont.CustomFontTextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Restau name"
+                    android:textAllCaps="true"
+                    android:maxLines="2"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:custom_typeface="font/roboto/Roboto-Regular.ttf"/>
+
+                <com.thebrownarrow.customfont.CustomFontTextView
+                    android:id="@+id/desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/test_desc"
+                    android:lines="3"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="2dp"
+                    app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/bg"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/identity_layout"
+            android:paddingLeft="@dimen/default_padding"
+            android:paddingRight="@dimen/default_padding"
+            android:background="@color/grey_100"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.thebrownarrow.customfont.CustomFontButton
+                        android:id="@+id/phone1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorAccent"
+                        android:maxLines="1"
+                        android:text="00226 64 04 91 58"
+                        android:backgroundTint="@color/white"
+                        app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+                    <com.thebrownarrow.customfont.CustomFontButton
+                        android:id="@+id/phone2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorAccent"
+                        android:maxLines="1"
+                        android:text="00226 71 95 51 66"
+                        android:backgroundTint="@color/white"
+                        app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+
+                </LinearLayout>
+
+                <com.thebrownarrow.customfont.CustomFontButton
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="derokabore@gmail.com"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorAccent"
+                    app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

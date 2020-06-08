@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/CardViewStyle">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="30"
+            android:src="@drawable/bg"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:layout_weight="70"
+            android:padding="@dimen/default_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.thebrownarrow.customfont.CustomFontTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:id="@+id/item_number"
+                    android:layout_marginRight="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:lineSpacingExtra="5dp"
+                    app:custom_typeface="font/roboto/Roboto-Regular.ttf" />
+
+                <com.thebrownarrow.customfont.CustomFontTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="90"
+                    android:id="@+id/item_name"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="5dp"
+                    app:custom_typeface="font/roboto/Roboto-Regular.ttf"
+                    android:text="Nom du plat" />
+
+            </LinearLayout>
+
+            <com.thebrownarrow.customfont.CustomFontTextView
+                android:id="@+id/item_desc"
+                android:textSize="12.0sp"
+                android:textColor="@color/black"
+                android:maxLines="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                app:custom_typeface="font/roboto/Roboto-Light.ttf"
+                android:text="Nom du plat" />
+
+            <com.thebrownarrow.customfont.CustomFontTextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/colorAccent"
+                android:text="1200 Fcfa"
+                app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

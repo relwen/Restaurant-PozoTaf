@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="iam.abdoulkader.pozotaf.CartActivity"
+    tools:showIn="@layout/activity_cart">
+
+    <ViewFlipper
+        android:id="@+id/cart_food_viewflipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/food_of_the_day">
+
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:padding="@dimen/default_padding"
+            android:indeterminateTint="@color/colorPrimaryDark"/>
+
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/two_x_default_padding"
+            android:text="@string/no_data"
+            android:gravity="center"
+            app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cart_food_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="LinearLayoutManager"
+            android:orientation="vertical"
+            tools:listitem="@layout/food_item" />
+
+    </ViewFlipper>
+
+</android.support.v4.widget.NestedScrollView>

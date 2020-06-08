@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/cart"
+        android:orderInCategory="100"
+        android:title="Panier"
+        android:icon="@drawable/ic_shopping_cart_white_24dp"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/orders"
+        android:orderInCategory="100"
+        android:title="Commandes"
+        android:icon="@drawable/ic_shopping_basket_black_24dp"
+        app:showAsAction="never" />
+
+</menu>

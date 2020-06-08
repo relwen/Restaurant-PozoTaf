@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="iam.abdoulkader.pozotaf.fragment.FoodListFragment">
+
+    <ViewFlipper
+        android:id="@+id/resto_viewflipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:padding="@dimen/default_padding"
+            android:indeterminateTint="@color/colorPrimaryDark"/>
+
+        <com.thebrownarrow.customfont.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/two_x_default_padding"
+            android:text="@string/no_data"
+            android:gravity="center"
+            app:custom_typeface="font/roboto/Roboto-Light.ttf"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/resto_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="LinearLayoutManager"
+            android:orientation="vertical"
+            tools:listitem="@layout/resto_item" />
+
+    </ViewFlipper>
+
+</FrameLayout>
