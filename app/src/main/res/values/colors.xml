@@ -16,6 +16,27 @@
     <color name="transparent">#00000000</color>
     <color name="white_transparent">#44FFFFFF</color>
 
+
+    <!-- colors for tab and screent text -->
+
+    <color name="tab_indicator_gray">#4CAF50</color>
+    <color name="intro_description_color">#B3D889</color>
+
+    <color name="gradient_start_color">#4c84ff</color>
+    <color name="gradient_end_color">#18a3fe</color>
+
+    <!--gradient colors-->
+    <color name="gradientOrange">#FF416C</color>
+    <color name="gradientViolet">#8A52E9</color>
+    <color name="gradientLightYellow">#FFA72F</color>
+    <color name="gradientLightOrange">#FF641A</color>
+    <color name="gradientLightYellow2">#FFC92B</color>
+    <color name="gradientLightOrange2">#FF7765</color>
+    <color name="gradientOrange3">#F7A23C</color>
+    <color name="gradientLightBlue">#376DF6</color>
+    <color name="gradientLightGreen">#21E8AC</color>
+
+
     /* MATERIAL COLORS PALETTE : START */
 
     <color name="red_50">#FFEBEE</color>
@@ -310,6 +331,7 @@
     <color name="background_dark_3">@color/purple_A400</color>
 
     <color name="black_overlay">#66000000</color>
+    <color name="intro_title_color">#F44336</color>
 
     /* INTRO FRAGMENT COLORS : END */
 

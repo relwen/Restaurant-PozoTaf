@@ -69,7 +69,7 @@ public class SlashScreenActivity extends BaseActivity {
                 public void run() {
                     CommonTask.openActivityAsFirst(mContext, SignActivity.class);
                 }
-            }, 1000);
+            }, 5000);
         }
     }
 

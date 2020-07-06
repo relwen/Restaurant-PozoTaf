@@ -26,8 +26,13 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+
         <activity
-            android:name=".MainActivity"
+            android:name=".SignActivity" android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <activity
+            android:name=".IntroActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -36,25 +41,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity
-            android:name=".SignActivity"
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".SlashScreenActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".FoodDetailsActivity"
             android:label="@string/title_activity_food_details"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".CartActivity"
             android:label="@string/title_activity_cart"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".OrderActivity"
             android:label="@string/title_activity_order"
             android:theme="@style/AppTheme.NoActionBar"/>
+
     </application>
 
 </manifest>

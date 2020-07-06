@@ -1,6 +1,7 @@
 package iam.abdoulkader.pozotaf.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -22,17 +23,24 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import iam.abdoulkader.pozotaf.MainActivity;
 import iam.abdoulkader.pozotaf.R;
 import iam.abdoulkader.pozotaf.SignActivity;
+import iam.abdoulkader.pozotaf.data.JsonResponse;
 import iam.abdoulkader.pozotaf.data.User;
+import iam.abdoulkader.pozotaf.service.PozotafWebService;
+import iam.abdoulkader.pozotaf.service.RequestInterface;
 import iam.abdoulkader.pozotaf.util.CommonTask;
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -109,29 +117,53 @@ public class SignInFragment extends BaseFragment {
         });
     }
 
-    private void login(String email_or_phone, String pwd) {
+    private void login(String email_or_phone, String password) {
 
         mSignInBtn.setEnabled(false);
         mProgressBar.setVisibility(View.VISIBLE);
-        Call<User> call = CommonTask.getWebService().userLogin(email_or_phone, pwd);
-        call.enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(Call<User> call, Response<User> response) {
-                if (response.isSuccessful()) {
-                    try {
-                        getDatabaseHelper().getUserDao().create(response.body());
-                        CommonTask.setUserID(mContext, response.body().id);
-                        CommonTask.openActivityAsFirst(mContext, MainActivity.class);
 
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://pozotaf.webvision-sarl.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        Call<JsonResponse> call=retrofit.create(RequestInterface.class).login(
+          email_or_phone,password
+        );
+
+
+
+        //Call<User> call = CommonTask.getWebService().userLogin(email_or_phone, pwd);
+        call.enqueue(new Callback<JsonResponse>() {
+            @Override
+            public void onResponse(Call<JsonResponse> call, Response<JsonResponse> response) {
+                if (response.isSuccessful()) {
+                    Toast.makeText(getContext(), "success", Toast.LENGTH_SHORT).show();
+
+                    //response.body().code();
+                    //getDatabaseHelper().getUserDao().create(response.body());
+                    //CommonTask.setUserID(mContext, response.body().id);
+
+                    JsonResponse reponse=response.body();
+                    int success=reponse.getCode();
+
+                    //Log.d("Mes", String.valueOf(success));
+
+                    if(success==200){
+                        Intent i=new Intent(getContext(),MainActivity.class);
+                        startActivity(i);
+                        //CommonTask.openActivityAsFirst(mContext, MainActivity.class);
+                    }else
+                        Toast.makeText(getContext(), "Les identifiants sont incorrects", Toast.LENGTH_SHORT).show();
+
+
                 } else {
                     try {
                         String msg = response.errorBody().string();
                         JSONObject jo = new JSONObject(msg);
                         Log.d("MYUSER_ERROR", msg.toString());
                         Toast.makeText(mContext, jo.getString("message"), Toast.LENGTH_LONG).show();
+
                     } catch (IOException e) {
                         e.printStackTrace();
                     } catch (JSONException e) {
@@ -144,7 +176,7 @@ public class SignInFragment extends BaseFragment {
             }
 
             @Override
-            public void onFailure(Call<User> call, Throwable throwable) {
+            public void onFailure(Call<JsonResponse> call, Throwable throwable) {
                 Toast.makeText(mContext, R.string.error_occured, Toast.LENGTH_LONG).show();
                 Log.d("MY_USER_FAIL", throwable.getMessage());
                 mSignInBtn.setEnabled(true);

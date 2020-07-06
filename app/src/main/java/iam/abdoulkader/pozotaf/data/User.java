@@ -30,7 +30,12 @@ public class User implements Parcelable {
     @ForeignCollectionField(eager = true)
     public ForeignCollection<Cart> carts;
 
+    private int code;
     public User() {
+    }
+
+    public int code(){
+        return code;
     }
 
     public User(int id, String full_name, String phone, String email, String password, int status) {

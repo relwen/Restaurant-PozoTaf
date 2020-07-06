@@ -20,37 +20,37 @@ import retrofit2.http.Path;
 
 public interface PozotafWebService {
 
-    public static final String ENDPOINT = "http://www.pozotaf.codacademie.tech/";
+    public static final String ENDPOINT = "http://pozotaf.webvision-sarl.com/";
     public final String TARGET = "";
 
-    @POST(TARGET + "/api/user/register")
+    @POST(TARGET + "/api/UserMobile/register")
     Call<User> userRegister(@Body User user);
 
-    @POST(TARGET + "/api/user/update")
+    @POST(TARGET + "/api/UserMobile/update")
     Call<User> userUpdate(@Body User user);
 
     @FormUrlEncoded
-    @POST(TARGET + "/api/user/login")
+    @POST(TARGET + "/api/UserMobile/login")
     Call<User> userLogin(@Field("email_or_phone") String email_or_phone,
                          @Field("password") String password);
 
     @FormUrlEncoded
-    @POST(TARGET + "/api/user/refreshUser")
+    @POST(TARGET + "/api/UserMobile/refreshUser")
     Call<User> userRefresh(@Field("id") String id);
 
-    @GET(TARGET + "/api/user/restos")
+    @GET(TARGET + "/api/UserMobile/restos")
     Call<ArrayList<Resto>> getRestos();
 
-    @GET(TARGET + "/api/user/foodCategories")
+    @GET(TARGET + "/api/UserMobile/foodCategories")
     Call<ArrayList<FoodCategory>> getFoodCategories();
 
-    @GET(TARGET + "/api/user/foods")
+    @GET(TARGET + "/api/UserMobile/foods")
     Call<ArrayList<Food>> getFoods();
 
-    @GET(TARGET + "/api/user/foods/{food_category_id}")
+    @GET(TARGET + "/api/UserMobile/foods/{food_category_id}")
     Call<ArrayList<Food>> getFoods(@Path("food_category_id") String food_category_id);
 
-    @GET(TARGET + "/api/user/foodOfTheDay")
+    @GET(TARGET + "/api/UserMobile/foodOfTheDay")
     Call<ArrayList<Food>> getFoodOfTheDay();
 
 }
